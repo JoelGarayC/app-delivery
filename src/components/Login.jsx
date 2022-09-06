@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 const Login = () => {
-  
   const valoresIniciales = {
     email: "",
     password: "",
@@ -9,23 +8,20 @@ const Login = () => {
 
   const [datos, setDatos] = useState(valoresIniciales);
 
-
-  const handleImputChange = (e) => 
-  {
+  const handleImputChange = (e) => {
     setDatos({
       ...datos,
-      [e.target.name]: e.target.valnue,
+      [e.target.name]: e.target.value,
     });
-  }
-  const handleSubmit = (e) => 
-    {
-      e.preventDefault();
-      setDatos(valoresIniciales);
-      console.log(datos);
-    };
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setDatos(valoresIniciales);
+    console.log(datos);
+  };
 
   return (
-    <form onSubmit={handleSubmit}> 
+    <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="email">email</label>
         <input
@@ -33,8 +29,8 @@ const Login = () => {
           name="email"
           id="email"
           onChange={handleImputChange}
-          value={datos.email}/>
-
+          value={datos.email}
+        />
       </div>
       <div>
         <label htmlFor="password">Contraseña</label>
