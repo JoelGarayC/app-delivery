@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/components/Login.css";
 
 const Login = () => {
   const valoresIniciales = {
@@ -21,7 +22,7 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="login@">
       <div>
         <label htmlFor="email">email</label>
         <input

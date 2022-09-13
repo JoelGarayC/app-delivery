@@ -7,10 +7,24 @@
   vertical-align: baseline; 
 }
 
+:root {
+  --background-color: #ffffff;
+  --tex-color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #272727;
+    --text-color: #ffffff;
+  }
+}
+
+
+
 body {
   font-size: 100%;
-  background-color: #1f1f1f;
-  color: #fff;
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-family: 'Poppins', sans-serif;
 }
 
